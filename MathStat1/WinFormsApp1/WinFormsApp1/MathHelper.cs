@@ -124,7 +124,6 @@ static decimal GetDispersionNotShifted(decimal[] data, decimal middle)
     }
     return Math.Round(data.Length / ((decimal)data.Length - 1) * (multiply / data.Length), 2);
 }
-
 static double GetDeviation(float dispersion)
 {
     return Math.Round((float)Math.Sqrt(dispersion), 2);

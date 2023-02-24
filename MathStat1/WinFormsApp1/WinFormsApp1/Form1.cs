@@ -176,7 +176,7 @@ namespace WinFormsApp1
             {
                 if (dict[item] == maxCount && !result.Contains(dict[item]))
                 {
-                    result.Add(dict[item]);
+                    result.Add(item);
                 }
             }
             string resultString = "";
