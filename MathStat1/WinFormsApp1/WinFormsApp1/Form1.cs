@@ -31,8 +31,8 @@ namespace WinFormsApp1
                 }
             }
             const int lenght = 50;
-            var max = data.Max();
-            var min = data.Min();
+            var max = (int)data.Max() + 5;
+            var min = (int)data.Min() - 5;
             double range = max - min;
             var volume = data.Count();
             var middle = data.Sum() / volume;
@@ -62,8 +62,8 @@ namespace WinFormsApp1
             {
                 Vy[i] = Vy[i] / (data.Count());
             }
-            label1.Text = $"max - {max}";
-            label2.Text = $"min - {min}";
+            label1.Text = $"max - {data.Max()}";
+            label2.Text = $"min - {data.Min()}";
             label3.Text = $"мода - {GetModaAsString(data)}";
             chart1.Series["Series1"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
             chart1.Series["Series1"].Points.DataBindXY(Vx, Vy);
@@ -87,8 +87,8 @@ namespace WinFormsApp1
             }
             dataS.Sort();
             const int lenghtS = 50;
-            var maxS = dataS.Max();
-            var minS = dataS.Min();
+            var maxS = (int)dataS.Max() + 5;
+            var minS = (int)dataS.Min() - 5;
             double rangeS = maxS - minS;
             var volumeS = dataS.Count();
             var middleS = dataS.Sum() / volumeS;
